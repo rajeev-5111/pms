@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Applicants</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h2>Applicants</h2>
+    <ul>
+        {% for application in applications %}
+            <li>{{ application.student.username }} - {{ application.status }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
